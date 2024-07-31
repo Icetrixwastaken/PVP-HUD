@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "pvp-essentials",
+	"version": "${version}",
+	"name": "PVP Essentials",
+	"description": "PVP Essentials is a Minecraft mod for enhancing PvP. It provides a user-friendly HUD that shows essential information, such as armor durability, golden apple count, ender pearl availability, and arrow count.",
+	"authors": [
+		"PhantomZ3",
+		"Drypted"
+	],
+	"contact": {
+		"homepage": "https://github.com/sdphantomz3/pvpessentials",
+		"sources": "https://github.com/sdphantomz3/pvpessentials"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pvp-essentials/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.phantomz3.PVPEssentials"
+		],
+		"client": [
+			"com.phantomz3.PVPEssentialsClient"
+		],
+		"fabric-datagen": [
+			"com.phantomz3.PVPEssentialsDataGenerator"
+		],
+		"modmenu": [
+			"com.phantomz3.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"pvp-essentials.mixins.json",
+		{
+			"config": "pvp-essentials.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
