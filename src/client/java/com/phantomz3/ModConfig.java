@@ -11,14 +11,14 @@ public class ModConfig {
     public static int START_Y = 0;    
     public static boolean DISPLAY_DURABILITY_AS_PERCENTAGE = true;
     public static boolean SHOW_ARMOR = true;
-    public static boolean SHOW_GOLDEN_APPLES = true;
+    public static boolean SHOW_EXPERIENCE_BOTTLE = true;
     public static boolean SHOW_ENDER_PEARLS = true;
     public static boolean SHOW_ARROWS = true;
 
     public static Screen createConfigScreen(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
             .setParentScreen(parent)
-            .setTitle(Text.of("PVP Essentials Config"));
+            .setTitle(Text.of("PVP HUD Config"));
 
         ConfigCategory general = builder.getOrCreateCategory(Text.of("General"));
 
@@ -47,11 +47,10 @@ public class ModConfig {
             .setTooltip(Text.of("Show the player's armor"))
             .setSaveConsumer(newValue -> SHOW_ARMOR = newValue)
             .build());
-
-        general.addEntry(entryBuilder.startBooleanToggle(Text.of("Show golden apples"), SHOW_GOLDEN_APPLES)
+        general.addEntry(entryBuilder.startBooleanToggle(Text.of("Show experience bottles"), SHOW_EXPERIENCE_BOTTLES)
             .setDefaultValue(true)
-            .setTooltip(Text.of("Show the number of golden apples in the player's inventory"))
-            .setSaveConsumer(newValue -> SHOW_GOLDEN_APPLES = newValue)
+            .setTooltip(Text.of("Show the number of experience bottles in the player's inventory"))
+            .setSaveConsumer(newValue -> SHOW_EXPERIENCE_BOTTLES = newValue)
             .build());
 
         general.addEntry(entryBuilder.startBooleanToggle(Text.of("Show ender pearls"), SHOW_ENDER_PEARLS)
