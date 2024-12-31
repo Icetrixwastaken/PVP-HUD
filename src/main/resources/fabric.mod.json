@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "pvp-essentials",
 	"version": "${version}",
-	"name": "PVP Essentials",
-	"description": "PVP Essentials is a Minecraft mod for enhancing PvP. It provides a user-friendly HUD that shows essential information, such as armor durability, golden apple count, ender pearl availability, and arrow count.",
+	"name": "PVP HUD",
+	"description": "PVP HUD is a fork of PhantomZ3's PvP Essentials mod for enhancing PvP. It provides a user-friendly HUD that shows essential information, such as armor durability, experience bottle count, ender pearl availability, and arrow count.",
 	"authors": [
 		"PhantomZ3",
 		"Drypted"
