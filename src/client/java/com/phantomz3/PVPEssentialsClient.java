@@ -41,10 +41,10 @@ public class PVPEssentialsClient implements ClientModInitializer {
                 y += 16;
             }
 
-            // Golden apples display
-            if (ModConfig.SHOW_GOLDEN_APPLES) {
-                int goldenAppleCount = getItemCount(player, "golden_apple");
-                displayItemWithCount(drawContext, client, "golden_apple", goldenAppleCount, x, y);
+            // Experience bottles display
+            if (ModConfig.SHOW_EXPERIENCE_BOTTLES) {
+                int experienceBottleCount = getItemCount(player, "experience_bottle");
+                displayItemWithCount(drawContext, client, "experience_bottle", experienceBottleCount, x, y);
                 y += 16;
             }
 
